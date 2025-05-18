@@ -1,1 +1,3 @@
 Hello, I am here to learn how to push code on GitHub by git command.
+
+I have added some code.
