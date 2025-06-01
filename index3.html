@@ -3,6 +3,18 @@
 <head>
     <title>Second Page</title>
     <style>
+        .decorated-image {
+            height: 400px;
+            width: 500px;
+            border-radius: 30px;
+            border: 5px green solid; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;  
+        }
+        .decorated-image:hover{
+            transform: scale(1.2);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
         p {
             font-size: 16px;
         }
@@ -22,8 +34,8 @@
 <body>
     <h1>Introduction to Deep Learning</h1>
     <p>Deep Learning is transforming the way machines understand, learn, and interact with complex data. Deep learning mimics neural networks of the human brain, enabling computers to autonomously uncover patterns and make informed decisions from vast amounts of unstructured data.</p>
-      
-    <img src="https://media.licdn.com/dms/image/v2/D4E12AQEypRhr0S94uA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1702899042205?e=2147483647&v=beta&t=l7VpchaM-rJEQBOMmB0ZpypDYxubz1iRWUvdzAwHeXE" width="800" height="500">
+    <img src="https://media.licdn.com/dms/image/v2/D4E12AQEypRhr0S94uA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1702899042205?e=2147483647&v=beta&t=l7VpchaM-rJEQBOMmB0ZpypDYxubz1iRWUvdzAwHeXE" alt="image of Deep Learning Classroom" class="decorated-image">
+    
     <h2>How Deep Learning Works?</h2>
     <p>Neural networks consist of layers of interconnected nodes, or neurons, that collaborate to process input data. In a fully connected deep neural network, data flows through multiple layers, where each neuron performs nonlinear transformations, allowing the model to learn intricate representations of the data.</p>
     <p>In a deep neural network, the input layer receives data, which passes through hidden layers that transform the data using nonlinear functions. The final output layer generates the model’s prediction.</p>
