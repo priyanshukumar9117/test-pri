@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sarkari Result - Clone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #800000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    nav {
+      background-color: #333;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: block;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .box {
+      background-color: white;
+      padding: 15px;
+      border: 1px solid #ccc;
+      width: 30%;
+      min-width: 250px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .box h3 {
+      color: #800000;
+      font-size: 18px;
+      margin-top: 0;
+    }
+
+    footer {
+      background-color: #800000;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 768px) {
+      .box {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 500px) {
+      nav {
+        flex-direction: column;
+      }
+
+      .box {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SARKARI RESULT</h1>
+  <p>WWW.SARKARIRESULT.COM</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Latest Jobs</a>
+  <a href="#">Results</a>
+  <a href="#">Admit Card</a>
+  <a href="#">Answer Key</a>
+  <a href="#">Syllabus</a>
+  <a href="#">Contact Us</a>
+</nav>
+
+<div class="container">
+  <div class="box">
+    <h3>Latest Job</h3>
+    <p>UP Police Constable Recruitment 2025 - Apply Online</p>
+  </div>
+  <div class="box">
+    <h3>Admit Card</h3>
+    <p>SSC CGL 2025 Tier I Admit Card Available Now</p>
+  </div>
+  <div class="box">
+    <h3>Results</h3>
+    <p>Railway Group D Final Result 2025 Declared</p>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 SarkariResult Clone | This is a demo project</p>
+</footer>
+
+</body>
+</html>

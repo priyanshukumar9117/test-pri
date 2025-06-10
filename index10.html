@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Information Form</title>
+    <style>
+        div{
+            background-color: aqua;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-display: none;
+            padding: 10px;
+            margin-left:20px;
+        }
+    </style>
+</head>
+<body>
+<div>
+<h2>Basic Information Form</h2>
+
+<form action="#" method="post">
+    <!-- Name -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <!-- Mobile Number -->
+    <label for="mobile">Mobile No:</label>
+    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required><br><br>
+
+    <!-- Email Address -->
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <!-- Gender -->
+    <label>Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="Male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="Other">
+    <label for="other">Other</label><br><br>
+
+    <!-- Education -->
+    <label>Education Done:</label><br>
+    <input type="checkbox" id="highschool" name="education" value="High School">
+    <label for="highschool">High School</label><br>
+    <input type="checkbox" id="bachelor" name="education" value="Bachelor's">
+    <label for="bachelor">Bachelor's</label><br>
+    <input type="checkbox" id="master" name="education" value="Master's">
+    <label for="master">Master's</label><br><br>
+
+    <!-- Do you like tea? -->
+    <label for="tea">Do you like tea?</label>
+    <select id="tea" name="tea">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Sometimes">Sometimes</option>
+    </select><br><br>
+
+    <!-- Buttons -->
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+</form>
+</div>
+</body>
+</html>
