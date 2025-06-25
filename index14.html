@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaSript Programs</title>
+</head>
+<body>
+    <h1>JavaScript Function Outputs (Open Console)</h1>
+  <p>Open your browser console (Right Click → Inspect → Console tab) to see results.</p>
+
+  <script>
+    // 1. Filter Negative Numbers
+    function filterNegatives(arr) {
+      return arr.filter(num => num >= 0);
+    }
+    console.log("1. Filter Negatives:", filterNegatives([4, -2, 0, -7, 10]));
+
+    // 2. Difference with 13 (Double if Greater)
+    function diffWith13(num) {
+      let diff = Math.abs(num - 13);
+      return num > 13 ? diff * 2 : diff;
+    }
+    console.log("2. Difference with 13 (20):", diffWith13(20));
+    console.log("2. Difference with 13 (10):", diffWith13(10));
+
+    // 3. Fibonacci Series
+    function fibonacciSeries(n) {
+      let fib = [0, 1];
+      for (let i = 2; i < n; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+      }
+      return fib.slice(0, n);
+    }
+    console.log("3. Fibonacci (10):", fibonacciSeries(10));
+
+    // 4. Sum of Multiples of 3 and 5 below 1000
+    function sumMultiplesOf3And5(limit) {
+      let sum = 0;
+      for (let i = 0; i < limit; i++) {
+        if (i % 3 === 0 || i % 5 === 0) {
+          sum += i;
+        }
+      }
+      return sum;
+    }
+    console.log("4. Sum of Multiples of 3 and 5 below 1000:", sumMultiplesOf3And5(1000));
+
+    // 5. Cube Using Function Object
+    const cube = new Function("num", "return num * num * num;");
+    console.log("5. Cube of 3:", cube(3));
+    console.log("5. Cube of 5:", cube(5));
+  </script>
+</body>
+</html>
