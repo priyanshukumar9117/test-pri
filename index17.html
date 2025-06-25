@@ -5,11 +5,11 @@
 </head>
 <body>
     <h1>JavaScript Exception Handling Programs</h1>
-  <p>✅ Open browser console (Right click → Inspect → Console tab) to see the output.</p>
+  <p> Open browser console (Right click → Inspect → Console tab) to see the output.</p>
 
   <script>
     //1. Program to handle Exception
-    console.log("1. ❌ Handling undeclared variable:");
+    console.log("1. Handling undeclared variable:");
     try {
       console.log(myVar); // not declared
     } catch (error) {
@@ -17,7 +17,7 @@
     }
 
     //2. Program to throw divide by Zero error
-    console.log("\n2. ➗ Throw 'Divide by Zero' error:");
+    console.log("\n2.  Throw 'Divide by Zero' error:");
     function divide(a, b) {
       if (b === 0) throw new Error("Divide by Zero Error");
       return a / b;
@@ -29,7 +29,7 @@
     }
 
     //3. Program to throw out of bound error
-    console.log("\n3. 🚫 Throw 'Out of Bound' error:");
+    console.log("\n3.  Throw 'Out of Bound' error:");
     function getElement(arr, index) {
       if (index < 0 || index >= arr.length) throw new Error("Out of Bound Error");
       return arr[index];
@@ -42,7 +42,7 @@
     }
 
     //4. Program of exception handling using finally statement
-    console.log("\n4. 🔁 Exception with finally block:");
+    console.log("\n4.  Exception with finally block:");
     function divideWithFinally(a, b) {
       try {
         if (b === 0) throw new Error("Cannot divide by zero");
