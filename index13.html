@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javasript Programs</title>
+</head>
+<body>
+    <h1>JavaScript Program Output</h1>
+    <script>
+        // 1. Print name and address
+        console.log("Name: Priyanshu Kumar");
+        console.log("Address: Gaya, Bihar, India");
+
+        // 2. Compare value and data type
+        let a = 10;
+        let b = '10';
+        console.log("Value and Type Match:", a === b);
+
+        // 3. Add strings in uppercase
+        function addStringsInUpperCase(str1, str2) {
+            return (str1 + str2).toUpperCase();
+        }
+        console.log("Uppercase:", addStringsInUpperCase("hello", "world"));
+
+        // 4. String byte size
+        function getStringSizeInBytes(str) {
+            return new Blob([str]).size;
+        }
+        console.log("Byte Size:", getStringSizeInBytes("Hello World!"));
+
+        // 5. Round a number
+        function roundNumber(num, digits) {
+            return Number(num.toFixed(digits));
+        }
+        console.log("Rounded Number:", roundNumber(3.14159265, 2));
+    </script>
+    <p>Open the browser console (Right Click > Inspect > Console) to see the output.</p>
+</body>
+</html>
