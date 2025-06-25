@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Programs</title>
+    <style>
+       body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    #formOutput {
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f2f2f2;
+    }
+
+    #textSample {
+      margin-top: 10px;
+    }
+
+    button {
+      margin-right: 10px;
+    }
+    </style>
+</head>
+<body>
+    <!-- 1. Basic Information Form -->
+  <h2>1. Basic Information Form</h2>
+  <form id="infoForm">
+    <label>Name:</label>
+    <input type="text" id="name" required><br><br>
+    <label>Email:</label>
+    <input type="email" id="email" required><br><br>
+    <label>Age:</label>
+    <input type="number" id="age" required><br><br>
+    <button type="button" onclick="showFormData()">Submit</button>
+  </form>
+
+  <div id="formOutput"></div>
+
+  <hr>
+
+  <!-- 2. Change Image on Button Click -->
+  <h2>2. Change Image on Button Click</h2>
+  <img id="myImage" src="https://via.placeholder.com/150" width="150" alt="placeholder image">
+  <br><br>
+  <button onclick="changeImage()">Change Image</button>
+
+  <hr>
+
+  <!-- 3. Increase / Decrease Font Size -->
+  <h2>3. Change Font Size</h2>
+  <p id="textSample">This is a sample text for font size adjustment.</p>
+  <button onclick="changeFontSize('increase')">Increase Font</button>
+  <button onclick="changeFontSize('decrease')">Decrease Font</button>
+
+  <hr>
+
+  <!-- 4. Show Current Date and Time -->
+  <h2>4. Show Current Date & Time</h2>
+  <p id="datetime">Click the button to show current date and time.</p>
+  <button onclick="showDateTime()">Show Date & Time</button>
+
+  <!-- JavaScript Logic -->
+  <script>
+    // 1. Show form data below form
+    function showFormData() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const age = document.getElementById("age").value;
+
+      const output = `
+        <strong>Name:</strong> ${name}<br>
+        <strong>Email:</strong> ${email}<br>
+        <strong>Age:</strong> ${age}
+      `;
+      document.getElementById("formOutput").innerHTML = output;
+    }
+
+    // 2. Change image on button click
+    function changeImage() {
+      const img = document.getElementById("myImage");
+      // Random image using picsum.photos
+      img.src = "https://picsum.photos/150?random=" + Math.floor(Math.random() * 1000);
+    }
+
+    // 3. Font size adjustment
+    let fontSize = 16;
+    function changeFontSize(action) {
+      if (action === "increase") {
+        fontSize += 2;
+      } else if (action === "decrease" && fontSize > 8) {
+        fontSize -= 2;
+      }
+      document.getElementById("textSample").style.fontSize = fontSize + "px";
+    }
+
+    // 4. Show current date & time
+    function showDateTime() {
+      const now = new Date();
+      document.getElementById("datetime").innerText = now.toString();
+    }
+  </script>
+
+</body>
+</html>
